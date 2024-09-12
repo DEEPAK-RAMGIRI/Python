@@ -19,4 +19,4 @@ def missingRolls(rolls, mean, n):
         result[i] += 1
 
     return result
-print(missingRolls([3,2,4,3],4,2))
+print(missingRolls([3,2,4,5],4,2))
