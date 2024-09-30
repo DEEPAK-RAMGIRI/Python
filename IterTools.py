@@ -1,3 +1,4 @@
+# https://docs.python.org/2/library/itertools.html
 from itertools import combinations
 from itertools import product
 from itertools import combinations_with_replacement
