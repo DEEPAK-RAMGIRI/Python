@@ -13,6 +13,13 @@ def function2(a,n):
         sums=max(sums,sums-a[i-n]+a[i])
     return sums
 
+def function3(a,n):
+    sums =0
+    for i in range(len(a)):
+        sums = max(sums,sum(a[i:i+n]))
+    return sums 
+        
+
 def longestSubString(b):
     CharSet=set()
     maximum=0
@@ -24,12 +31,14 @@ def longestSubString(b):
         CharSet.add(b[i])
         maximum=max(maximum,i-j+1)
     return maximum
+
     
         
 a=[1, 2, 3, 4, 5, 6, 7, 8, 9]
 n=3
-# function1(a,n)
-print()
-# print(function2(a,n))
+function1(a,n)
+# print()
+
+print(function3(a,n))
 b="abcabcbb"
-print(longestSubString(b))
+# print(longestSubString(b))

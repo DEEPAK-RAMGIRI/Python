@@ -130,8 +130,10 @@
     
 class prime:
     
-    def __init__(self,number):
+    def __init__(self,number,array,number2):
         self.number = number
+        self.array = array
+        self.number2 = number2
         
     def primeornot(self):
         flag = True
@@ -156,10 +158,33 @@ class prime:
                     break
             if flag:
                 print(i)
+                
+    def largestnumber(self):
+        print(f"The largest number in the array is:{max(self.array)}")
+        
+    def swap_method1(self):
+        self.number,self.number2 = self.number2,self.number
+        print(self.number,self.number2)
+    
+    def swap_method2(self):
+        self.number = self.number ^ self.number2
+        self.number2 = self.number ^ self.number2
+        self.number = self.number ^ self.number2
+        
+        print(self.number,self.number2)
+        
+        
+        
             
             
-a = int(input())
-obj1 = prime(a)
+a = 10 #int(input())
+array = [1,3,-100]
+swapb =11
+
+obj1 = prime(a,array,swapb)
 # obj1.primeornot()
 obj1.prime_range()
+obj1.largestnumber()
+# obj1.swap_method1()
+obj1.swap_method2()
 
