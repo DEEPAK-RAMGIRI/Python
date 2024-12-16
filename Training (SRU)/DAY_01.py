@@ -147,8 +147,19 @@ class prime:
         else:
             print(f"{self.number} is not a prime number")
     
+    def prime_range(self):
+        for i in range(2,self.number):
+            flag =True
+            for j in range(2,i//2+1):
+                if not i%j:
+                    flag = False
+                    break
+            if flag:
+                print(i)
+            
             
 a = int(input())
 obj1 = prime(a)
-obj1.primeornot()
+# obj1.primeornot()
+obj1.prime_range()
 
