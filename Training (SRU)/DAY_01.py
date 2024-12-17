@@ -172,19 +172,23 @@ class prime:
         self.number = self.number ^ self.number2
         
         print(self.number,self.number2)
-        
+    
+    def sum_digits(self):
+        sums = sum(int(i) for i in self.number2)
+        print(sums)
         
         
             
             
 a = 10 #int(input())
 array = [1,3,-100]
-swapb =11
+swapb =input()
 
 obj1 = prime(a,array,swapb)
 # obj1.primeornot()
-obj1.prime_range()
-obj1.largestnumber()
-# obj1.swap_method1()
-obj1.swap_method2()
+# obj1.prime_range()
+# obj1.largestnumber()
+# # obj1.swap_method1()
+# obj1.swap_method2()
+obj1.sum_digits()
 
