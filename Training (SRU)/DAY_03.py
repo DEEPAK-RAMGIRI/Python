@@ -80,6 +80,54 @@ class Day03:
             if i not in string2:
                 string2+= i 
         print(string2)
+        
+    def upper_to_lower_and_lower_to_upper(self,string):
+        
+        # string2=""
+        # for i in string:
+        #     if i.isupper():
+        #         string2+=i.lower()
+        #     else:
+        #          string2+=i.upper()
+        
+        string2 = "EXams".swapcase()  #MORE OPTMISED VERSION (KEYWORD swapcase)
+        print(string2)
+    
+    #Addition of two digits
+    def SumDigits(self,num1,num2):
+        return num1+num2   
+    
+    def SubtractDigits(self,num1,num2):
+        return num1-num2
+    
+    def MultDigits(self,num1,num2):
+        return num1 * num2
+    
+    def divDigits(self,num1,num2):
+        return num1 // num2
+    
+    def Odd_Or_Even(self,num1):
+        return "Odd Number" if  num1 & 1 else "Even Number"    
+    
+    def prime_or_not(self,num1):
+        
+        for i in range(2,int(math.sqrt(num1))+1):
+            if not num1 % i:
+                return "Not prime Number"
+        return "prime Number" if num1 != 1 else "it is neither composite nor prime"
+    
+    def Fizz_Buzz(self,no):
+        
+        for i in range(1,no):
+            if not i%3 and not i%5:
+                print("Fizz Buzz")
+            elif not i%5:
+                print("Buzz")
+            elif not i%3: 
+                print("Fizz")
+            else:
+                print(i)
+        
    
         
 dict1 = dict({
@@ -99,6 +147,19 @@ obj1 = Day03(dict1,list1,number)
 # obj1.perfect_no()
 # obj1.multiples()
 
-string ="eeeeefgh"
+# string ="eeeeefgh"
 # obj1.duplicate_count()
-obj1.remove_duplicate_and_print(string)
+# obj1.remove_duplicate_and_print(string)
+
+# string1= "EXams"
+# obj1.upper_to_lower_and_lower_to_upper(string1)
+
+# print(obj1.SumDigits(10,20))
+# print(obj1.SubtractDigits(10,20))
+# print(obj1.MultDigits(10,20))
+# print(obj1.divDigits(10,20))
+
+# print(obj1.Odd_Or_Even(23))
+
+# print(obj1.prime_or_not(4))
+# obj1.Fizz_Buzz(21)
