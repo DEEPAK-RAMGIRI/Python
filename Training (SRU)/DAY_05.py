@@ -155,12 +155,6 @@ obj = Day05(list1)
 
 # obj.rotate_string("abcde","cdea")
 print(obj.isomorphic_string('egg','addb'))
-
-
-
-
-   
-    
     
     #       __          ____  |      /\    ___   __
     # |\ | |__ | /\|   |      |     /__\  |___  |__
@@ -260,6 +254,8 @@ class IPhone(Andriod):
 # phone2.battery()
 # phone2.calls()
 # phone2.camera()
+
+
 
 
         
