@@ -1,3 +1,4 @@
+import math
 class Day04:
     def __init__(self,number,list1):
         self.number = number
@@ -93,13 +94,54 @@ class Day04:
         
         #method 02 
         print(list(set(self.list1)))
+    
+    # armsstrong or not
+    def  armstrong_no(self):
         
-    # def 
-                
-                
+        ans = self.number
+        sums =0
+        while ans != 0:
+            rem = ans%10
+            sums += math.pow(rem,len(str(self.number)))
+            ans//=10
+        print("Armstrong number" if sums == self.number else "Not a Armstrong number")
         
-number = 10 #int(input())    
-list1 = [1,2,4,1,-1,56,12,234,2]
+        # Method 02
+        # ans = str(self.number)
+        # sums =0
+        # for i in ans:
+        #     sums += math.pow(int(i),len(ans))
+        # print("Armstrong number" if sums == self.number else "Not a Armstrong number")
+        
+        
+            
+            
+    def secound_max_digit_array(self):
+        
+        #method 1
+        
+            # first = 0
+            # for i in self.list1:
+            #     if first < i:
+            #         secound = first     
+            #         first = i
+            # print(f"Secound largest umber is {secound}")
+        
+        # method 02
+        print(sorted(list(self.list1),reverse=True)[1])
+        
+    
+    def pattern6_reversePyramid(self):
+       for i in range(self.number,0,-1):
+            for _ in range(self.number-i):
+                print(" ",end=' ')
+            for _ in range(i*2-1):
+                print("*",end=' ')
+            print()        
+        
+number = 4#int(input())    
+# list1 = [1,2,4,1,-1,56,12,234,2]
+list1 =[10, 20, 4, 45]
 # list2 = [1,2,3,4,5,6]    
 obj1 = Day04(number,list1)
 # obj1.max_in_digit('9901')
@@ -115,6 +157,12 @@ obj1 = Day04(number,list1)
 # obj1.min_max_in_array()
 # obj1.array_sort_or_not()
 
-obj1.remove_duplicate_and_print()
+# obj1.remove_duplicate_and_print()
+
+# obj1.armstrong_no()
+# obj1.secound_max_digit_array()
+
+obj1.pattern6_reversePyramid()
+
 
 
