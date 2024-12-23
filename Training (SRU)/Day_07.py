@@ -170,25 +170,50 @@ obj = Day07(nums,nums2)
 
 ## LINKED LIST
 
-    class Node:
-        def __init__(self,data,next =None):
-            self.data = data
-            self.next = None
-            
-        def inserting_to_node(self):
-            pass
+# class Node:
+#     def __init__(self,data):
+#         self.data = data
+#         self.next = None
         
-        def printing(self):
-            while self is not None:
-                print(self.data)
-                self = self.next
+#     def inserting_to_node(self):
+#         pass
+        
+#     def printing(self):
+#         while self is not None:
+#             print(self.data)
+#             self = self.next
                 
-    node1 =Node(10)
-    node2 =Node(20)
-    node3 =Node(30)
-    node4 =Node(40)
-    node1.next = node2
-    node2.next = node3
-    node3.next = node4
-    node1.printing()
+# node1 =Node(10)
+# node2 =Node(20)
+# node3 =Node(30)
+# node4 =Node(40)
+# node1.next = node2
+# node2.next = node3
+# node3.next = node4
+# node1.printing()
 
+# Doubly linked list
+
+class DoubleNode:
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+        self.prev = None
+        
+    def print_prev(self):
+        while self is not None:
+            print(f"<-{self.data}",end=' ')
+            self = self.prev
+            
+    def print_next(self):
+        while self is not None:
+            print(f"{self.data} ->",end=' ')
+            self = self.next
+
+node1 = DoubleNode(90)
+node2 = DoubleNode(80)
+node3 = DoubleNode(100)
+node1.prev = node2
+node1.next = node3
+node1.print_prev() 
+node1.print_next()
