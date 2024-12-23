@@ -127,11 +127,7 @@ class Day05:
             if i in ans:
                 if ans[i] != j:
                     return False
-            else:
-                if j in ans.values():
-                    return False
-                
-                ans[i] = j
+            ans[i] = j
         return True
     
     
