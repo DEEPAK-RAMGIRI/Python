@@ -42,4 +42,5 @@ class Bank:
     def getpin(self,pin):
         return f'pin:{self.pin}'
 b = Bank('Uday',2361,"Customer",1500.23)
+
 print(b)
