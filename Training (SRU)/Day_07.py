@@ -150,9 +150,30 @@ class Day07:
     
     
     def nth_largest_and_nth_smallest(self):
-        pass
+        arr = [3, 1, 4, 1, 5, 9, 2, 6, 5]
+        n = 3
+        if n > len(arr):
+            return "n is out of range"
+    
+        arr_sorted = sorted(arr)  # Sort the array
+        nth_smallest = arr_sorted[n - 1]  # nth smallest
+        nth_largest = arr_sorted[-n]  # nth largest
+        print(f"{n}th Smallest is: {nth_smallest}, {n}th Largest element is: {nth_largest}")
         
-                    
+    def match_parenthessis(self,string):
+        match = {'(':')','[':']','{' :'}'}
+        ans = []
+        for i in string:
+            if i in match.keys():
+                ans.append(i) 
+            elif not ans and match[ans.pop()] != i:
+                return False
+        if not ans:
+            return True
+        else:
+            return False
+            
+                   
 
         
 nums = [1,2,3,4,10,34]
@@ -166,31 +187,38 @@ obj = Day07(nums,nums2)
 # obj.secound_max_element()
 # obj.Union_of_lists()
 # obj.majortity_ele()
-
+# print(obj.match_parenthessis("[]{)"))
+obj.nth_largest_and_nth_smallest()
 
 ## LINKED LIST
 
-# class Node:
-#     def __init__(self,data):
-#         self.data = data
-#         self.next = None
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None
         
-#     def inserting_to_node(self):
-#         pass
+    def inserting_to_node(self):
+        pass
         
-#     def printing(self):
-#         while self is not None:
-#             print(self.data)
-#             self = self.next
+    def double_printing(self):
+        current = self.data
+        print(self.data)
+        self =self.next
+        while self.data != current:
+            print(self.data)
+            self = self.next
+    
+    
                 
-# node1 =Node(10)
-# node2 =Node(20)
-# node3 =Node(30)
-# node4 =Node(40)
-# node1.next = node2
-# node2.next = node3
-# node3.next = node4
-# node1.printing()
+node1 =Node(10)
+node2 =Node(20)
+node3 =Node(30)
+node4 =Node(40)
+node1.next = node2
+node2.next = node3
+node3.next = node4
+node4.next = node1
+node1.double_printing()
 
 # Doubly linked list
 
@@ -215,5 +243,5 @@ node2 = DoubleNode(80)
 node3 = DoubleNode(100)
 node1.prev = node2
 node1.next = node3
-node1.print_prev() 
-node1.print_next()
+# node1.print_prev() 
+# node1.print_next()
