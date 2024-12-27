@@ -106,9 +106,8 @@ while rowstart <= rowend and colstart <= colend:
         colstart += 1
     
     
-# for  i,val in enumerate(ans,1): # here 1 means it start from 1 if not given it start from 0
-#     print(val,end=" ")
-#     if not i%len(a[0]):
-#         print()
-    
+for  i,val in enumerate(ans,1): # here 1 means it start from 1 if not given it start from 0
+    print(val,end=" ")
+    if not i%len(a[0]):
+        print()
     
