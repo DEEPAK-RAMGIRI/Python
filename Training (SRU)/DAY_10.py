@@ -82,6 +82,14 @@ def height_of_tree(node):
         left = height_of_tree(node.left)
         right = height_of_tree(node.right)
     return 1+ max(left,right)
+
+def sum_of_nodes(node):
+    if node is None:
+        return 0
+    else:
+        left = sum_of_nodes(node.left)
+        right = sum_of_nodes(node.right)
+    return node.data + left+ right
     
            
 root=BinaryTree(10)
@@ -106,7 +114,9 @@ n6.left = n7
 # print(root.left.left.data,root.left.right.data)
 print("Found" if search(root,12) else "Not Found")
 
-print(height_of_tree(root))
+# print(height_of_tree(root))
+
+print(sum_of_nodes(root))
 
 # print('Pre order traversal')
 # 
