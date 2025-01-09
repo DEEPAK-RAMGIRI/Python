@@ -373,20 +373,3 @@
 # print(q2)
 
 #print Binary value:
-class Binary:
-    def __init__(self,no):
-        self.no = no
-        
-    def print_Binary(self):
-        print(bin(self.no)[2:])
-    
-    def normal_method(self):
-        number = self.no
-        value = ""
-        while number >0:
-            value=str(number%2) + value
-            number//=2
-        print(value)
-no = Binary(15)
-# no.print_Binary()
-no.normal_method()
