@@ -3,7 +3,7 @@ class Node:
     def __init__(self,data):
         self.data = data
         self.next = None
-        
+       
         
 def insert_end(head,data):
     
@@ -44,6 +44,17 @@ def deletenode(head):
         curr = nextnode
     return prev
 
+def deletenode2(node):
+    if not node or not node.next:
+        return node
+    nextnode = deletenode2(node.next)
+    
+    if nextnode.data > node.data:
+        return nextnode
+    
+    node.next =nextnode
+    return node
+        
 
 def printing(head):
     while head:
@@ -57,4 +68,5 @@ if __name__ == "__main__":
     for i in list1:
         head = insert_end(head,i)
         
-    printing(deletenode(head))  
+    # printing(deletenode(head))  
+    printing(deletenode2(head))
